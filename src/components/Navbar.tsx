@@ -5,7 +5,7 @@ const Navbar = () => {
     const location = useLocation(); 
   
     return (
-      <nav className="bg-gray-900 text-white py-4">
+      <nav className="bg-gray-900 text-white py-4 h-[120px]">
         <div className="container mx-auto flex flex-col items-center">
           
           <div className="text-3xl font-bold mb-4">

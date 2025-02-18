@@ -1,0 +1,36 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 120px); 
+    background-image: url('../assets/hamburg.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #111;  
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
+  .hero .content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
