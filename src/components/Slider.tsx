@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 
+interface SliderProps {
+    images: string[]
+}
 
-
-const Slider = ({ images }) => {
+const Slider: React.FC<SliderProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [images.length]);
