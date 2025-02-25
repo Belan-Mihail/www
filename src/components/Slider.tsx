@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 interface SliderProps {
-    images: string[]
+  images: string[];
+  justify: string;
 }
 
-const Slider: React.FC<SliderProps> = ({ images }) => {
+const Slider: React.FC<SliderProps> = ({ images, justify }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 10000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
@@ -24,24 +17,27 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
   };
 
   return (
-    <div className="relative h-full w-full">
+    <div className="relative h-[70%] w-[70%] mx-auto">
       <img
         src={images[currentIndex]}
         alt="Slide"
         className="w-full h-full object-cover"
       />
-      <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-between items-center px-4">
-        <button
-          onClick={handlePrev}
-          className="w-12 h-12 bg-black bg-opacity-50 text-white rounded-full flex justify-center items-center transform hover:scale-110 transition"
-        >
+      {/* Контейнер для стрелок и информации под слайдом */}
+      <div className={`flex items-end ${justify} gap-2 px-4 mt-4`}>
+        {/* Стрелка влево */}
+        <button onClick={handlePrev} className="text-white text-3xl">
           ←
         </button>
-        <button
-          onClick={handleNext}
-          className="w-12 h-12 bg-black bg-opacity-50 text-white rounded-full flex justify-center items-center transform hover:scale-110 transition"
-        >
-          → 
+
+        {/* Текущий слайд и общее количество */}
+        <span className="text-white text-lg">
+          {currentIndex + 1} / {images.length}
+        </span>
+
+        {/* Стрелка вправо */}
+        <button onClick={handleNext} className="text-white text-3xl">
+          →
         </button>
       </div>
     </div>
