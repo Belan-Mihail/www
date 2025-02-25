@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="container mx-auto flex flex-col items-center">
           
           <div className="text-3xl font-bold mb-4">
-            <span>Логотип</span>
+            <h1>Hanse-Fliesenlegern</h1>
           </div>
   
           
@@ -27,7 +27,7 @@ const Navbar = () => {
             ) : (
               
               <>
-                <Link to="/" className="hover:text-yellow-500 transition duration-300">Главная</Link>
+                <Link to="/" className="hover:text-yellow-500 transition duration-300">Startseite</Link>
                 <Link to="#unsere-arbeiten" className="hover:text-yellow-500 transition duration-300">Unsere Arbeiten</Link>
                 <Link to="#statistiken" className="hover:text-yellow-500 transition duration-300">Statistiken</Link>
                 <Link to="#bewertungen" className="hover:text-yellow-500 transition duration-300">Bewertungen</Link>

@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="hero"> 
       <div className="overlay"> 
         <div className="content">
-          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+          <h2>Aus Liebe zum Handwerk </h2>
         </div>
       </div>
     </section>

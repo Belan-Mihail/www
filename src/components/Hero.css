@@ -10,7 +10,7 @@
   
   .hero .overlay {
     position: absolute;
-    top: 0;
+    top: -200px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -29,7 +29,7 @@
     max-width: 600px;
   }
   
-  .hero h1 {
+  .hero h2 {
     font-size: 2rem;
     font-weight: bold;
   }
