@@ -17,14 +17,14 @@ const Slider: React.FC<SliderProps> = ({ images, justify }) => {
   };
 
   return (
-    <div className="relative h-[70%] w-[70%] mx-auto">
+    <div className="relative h-[85%] w-[90%] mx-auto">
       <img
         src={images[currentIndex]}
         alt="Slide"
         className="w-full h-full object-cover"
       />
       {/* Контейнер для стрелок и информации под слайдом */}
-      <div className={`flex items-end ${justify} gap-2 px-4 mt-4`}>
+      <div className={`flex items-end ${justify} gap-2 `}>
         {/* Стрелка влево */}
         <button onClick={handlePrev} className="text-white text-3xl">
           ←

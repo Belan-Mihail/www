@@ -1,0 +1,42 @@
+/* Класс для второго контейнера */
+.border-effect {
+    position: relative;
+    overflow: hidden;
+    background-color: #354458; /* фон, чтобы было видно, если вдруг не будет ховера */
+  }
+  
+  .border-effect::before,
+  .border-effect::after {
+    content: "";
+    position: absolute;
+    /* background: #9c00ff;  */
+    background: #ff7700; /* Цвет обводки */
+    transition: all 0.4s ease;
+  }
+  
+  /* Линия сверху слева (при ховере она растягивается по горизонтали) */
+  .border-effect::before {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+  }
+  
+  /* Линия снизу справа (при ховере она растягивается по вертикали) */
+  /* .border-effect::after {
+    bottom: 0;
+    right: 0;
+    height: 0;
+    width: 2px;
+  } */
+  
+  /* Эффект на ховере — линии начинают расширяться и соединяются */
+  .border-effect:hover::before {
+    width: 100%;
+  }
+  
+  /* .border-effect:hover::after {
+    height: 100%;
+    width: 100%;
+  } */
+  

@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "./Slider";
+import './Work.css'; 
 
 const WorkSectionTwo = () => {
   const images = [
@@ -16,9 +17,12 @@ const WorkSectionTwo = () => {
   ];
 
   return (
-    <div className="h-[50rem] flex flex-row-reverse bg-gradient-to-l from-gray-800 to-gray-900 text-white py-10 px-8">
-      
-      <div className="w-1/2 p-8 flex flex-col justify-center space-y-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#9c00ff]">
+    <div className="h-[50rem] flex bg-gradient-to-b text-white py-10 px-8" style={{
+      background: 'linear-gradient(to bottom, #0f172a, #618dc8, #0f172a)',
+    }}>
+  <div className="w-1/2 p-8 border-effect flex flex-col justify-center space-y-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#425174]" style={{
+      background: 'linear-gradient(to bottom, #0f172a, #354458, #0f172a)',
+    }}>
       
         <h2 className="text-4xl font-semibold text-center text-gradient">Altersgerechte Bäder</h2>
         <p className="text-2xl leading-relaxed text-center">
@@ -36,7 +40,9 @@ const WorkSectionTwo = () => {
           Kontaktieren Sie uns bei Fragen
         </p>
       </div>
-      <div className="w-1/2 relative flex flex-col justify-center bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#9c00ff]">
+      <div className="w-1/2 border-effect relative flex flex-col justify-center bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#425174]" style={{
+      background: 'linear-gradient(to bottom, #0f172a, #354458, #0f172a)', 
+    }}>
         <Slider images={images} justify="justify-start" />
       </div>
     </div>
