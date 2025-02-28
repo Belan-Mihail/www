@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import WorkSection from '../components/WorkSection'
 import WorkSectionTwo from '../components/WorkSectionTwo'
+import ActionOrder from '../components/ActionOrder'
 
 const HomePage = () => {
   return (
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Hero />  
       <WorkSection />
       <WorkSectionTwo />
+      <ActionOrder />
     </>
   )
 }
