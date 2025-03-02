@@ -1,18 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const ActionOrder: React.FC = () => {
-  const [visible, setVisible] = useState(false);
-
-  // Секция появляется через 500ms после рендеринга
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setVisible(true);
-    }, 500); // Появление секции через 500ms
-
-    return () => clearTimeout(timeout); // Очищаем таймер при размонтировании
-  }, []);
-
   return (
     <div className="bg-[#0f172a] text-white py-10 px-8">
       <h2 className="text-4xl font-semibold text-center mb-8">Ablauf der Aktion</h2>
@@ -20,14 +9,14 @@ const ActionOrder: React.FC = () => {
       <div className="flex justify-around gap-8">
         {/* Первый квадратик */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
-          animate={{
-            opacity: visible ? 1 : 0,
-            scale: visible ? 1 : 0, // Плавное увеличение до нормального размера
+          whileInView={{
+            opacity: 1,
+            scale: 1,
           }}
+          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
           transition={{
-            delay: 0, // Для первого квадратика без задержки
             duration: 0.5, // Время анимации
+            delay: 0, // Задержка для первого квадратика
           }}
           className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
@@ -38,14 +27,14 @@ const ActionOrder: React.FC = () => {
 
         {/* Второй квадратик */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
-          animate={{
-            opacity: visible ? 1 : 0,
-            scale: visible ? 1 : 0, // Плавное увеличение до нормального размера
+          whileInView={{
+            opacity: 1,
+            scale: 1,
           }}
+          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
           transition={{
-            delay: 0.5, // Для второго квадратика задержка 0.5 секунд
             duration: 0.5, // Время анимации
+            delay: 0.5, // Задержка 0.5 секунд для второго квадратика
           }}
           className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
@@ -56,14 +45,14 @@ const ActionOrder: React.FC = () => {
 
         {/* Третий квадратик */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
-          animate={{
-            opacity: visible ? 1 : 0,
-            scale: visible ? 1 : 0, // Плавное увеличение до нормального размера
+          whileInView={{
+            opacity: 1,
+            scale: 1,
           }}
+          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
           transition={{
-            delay: 1, // Для третьего квадратика задержка 1 секунда
             duration: 0.5, // Время анимации
+            delay: 1, // Задержка 1 секунда для третьего квадратика
           }}
           className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
@@ -74,14 +63,14 @@ const ActionOrder: React.FC = () => {
 
         {/* Четвертый квадратик */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
-          animate={{
-            opacity: visible ? 1 : 0,
-            scale: visible ? 1 : 0, // Плавное увеличение до нормального размера
+          whileInView={{
+            opacity: 1,
+            scale: 1,
           }}
+          initial={{ opacity: 0, scale: 0 }} // Начальный размер и прозрачность
           transition={{
-            delay: 1.5, // Для четвертого квадратика задержка 1.5 секунды
             duration: 0.5, // Время анимации
+            delay: 1.5, // Задержка 1.5 секунд для четвертого квадратика
           }}
           className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
