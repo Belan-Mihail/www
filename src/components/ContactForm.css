@@ -1,46 +1,36 @@
-.contact-form {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Подгонка по высоте */
-    background-image: url('../assets/image2.jpeg'); /* Замените на свой фон */
-    background-size: cover;
-    background-position: center;
-    border-bottom: 4px solid #0f172a;
-  }
-  
-  .contact-form .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.contact-section {
+    background: linear-gradient(to bottom, #0f172a, #354458, #0f172a);
+    padding: 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    min-height: 100vh; /* Чтобы форма располагалась по центру экрана */
   }
   
-  .contact-form .content {
+  .main-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
     text-align: center;
     color: white;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный фон под формой */
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
+    margin-bottom: 40px;
   }
   
-  .contact-form h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+  .contact-form-container {
+    width: 100%;
+    max-width: 600px; /* Ограничиваем ширину формы */
+    background-color: rgba(0, 0, 0, 0.7); /* Затемняем фон */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   }
   
   .contact-form .label {
     display: block;
-    margin: 10px 0 5px;
-    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-size: 1rem;
     font-weight: 600;
+    color: white;
   }
   
   .contact-form .text-input {
@@ -53,13 +43,23 @@
     background-color: rgba(255, 255, 255, 0.7);
   }
   
-  .contact-form .radio-label {
-    font-size: 0.9rem;
-    color: white;
-    margin-left: 10px;
+  .contact-form .consent-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем текст и чекбокс */
+    margin-bottom: 15px;
   }
   
-  .contact-form #btn {
+  .contact-form .consent-checkbox {
+    margin-right: 10px;
+  }
+  
+  .contact-form .consent-label {
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  .contact-form .submit-btn {
     padding: 12px 30px;
     background-color: #0f172a;
     color: white;
@@ -68,9 +68,11 @@
     cursor: pointer;
     font-size: 1.2rem;
     transition: background-color 0.3s ease;
+    margin: 0 auto; /* Центрируем кнопку */
+    display: block;
   }
   
-  .contact-form #btn:hover {
+  .contact-form .submit-btn:hover {
     background-color: #425174;
   }
   

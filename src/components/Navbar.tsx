@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav className="bg-gray-900 text-white py-4 h-[120px]">
         <div className="container mx-auto flex flex-col items-center">
           
-          <div className="text-3xl font-bold mb-4">
+          <div className="text-3xl font-bold mb-4 z-20">
             <h1>Hanse-Fliesenlegern</h1>
           </div>
   
@@ -18,20 +18,20 @@ const Navbar = () => {
             {location.pathname === '/' ? (
               
               <>
-                <a href="#startseite" className="hover:text-yellow-500 transition duration-300">Startseite</a>
-                <a href="#unsere-arbeiten" className="hover:text-yellow-500 transition duration-300">Unsere Arbeiten</a>
-                <a href="#statistiken" className="hover:text-yellow-500 transition duration-300">Statistiken</a>
-                <a href="#bewertungen" className="hover:text-yellow-500 transition duration-300">Bewertungen</a>
-                <a href="#kontakte" className="hover:text-yellow-500 transition duration-300">Kontakte</a>
+                <a href="#startseite" className="hover:text-yellow-500 transition duration-300 z-20">Startseite</a>
+                <a href="#unsere-arbeiten" className="hover:text-yellow-500 transition duration-300 z-20">Unsere Arbeiten</a>
+                <a href="#statistiken" className="hover:text-yellow-500 transition duration-300 z-20">Statistiken</a>
+                <a href="#bewertungen" className="hover:text-yellow-500 transition duration-300 z-20">Bewertungen</a>
+                <a href="#kontakte" className="hover:text-yellow-500 transition duration-300 z-20">Kontakte</a>
               </>
             ) : (
               
               <>
-                <Link to="/" className="hover:text-yellow-500 transition duration-300">Startseite</Link>
-                <Link to="#unsere-arbeiten" className="hover:text-yellow-500 transition duration-300">Unsere Arbeiten</Link>
-                <Link to="#statistiken" className="hover:text-yellow-500 transition duration-300">Statistiken</Link>
-                <Link to="#bewertungen" className="hover:text-yellow-500 transition duration-300">Bewertungen</Link>
-                <Link to="#kontakte" className="hover:text-yellow-500 transition duration-300">Kontakte</Link>
+                <Link to="/" className="hover:text-yellow-500 transition duration-300 z-20">Startseite</Link>
+                <Link to="#unsere-arbeiten" className="hover:text-yellow-500 transition duration-300 z-20">Unsere Arbeiten</Link>
+                <Link to="#statistiken" className="hover:text-yellow-500 transition duration-300 z-20">Statistiken</Link>
+                <Link to="#bewertungen" className="hover:text-yellow-500 transition duration-300 z-20">Bewertungen</Link>
+                <Link to="#kontakte" className="hover:text-yellow-500 transition duration-300 z-20">Kontakte</Link>
               </>
             )}
           </div>

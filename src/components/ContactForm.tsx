@@ -1,55 +1,63 @@
 import React from "react";
-import "./ContactForm.css"; // Импортируем стили
+import './ContactForm.css'; // Ваши стили для компонента
 
 const ContactForm: React.FC = () => {
   return (
-    <section className="contact-form">
-      <div className="overlay">
-        <div className="content">
-          <h2>Kontaktieren Sie uns</h2>
-          <form method="POST" action="#" id="feedback-form">
-            <label htmlFor="yname" className="label">Ihr Name</label>
+    <div className="contact-section">
+      {/* Заголовок для секции */}
+      <h2 className="main-heading text-white text-4xl font-semibold text-center mb-10">
+        Kontaktieren Sie uns
+      </h2>
+
+      {/* Контактная форма */}
+      <div className="contact-form-container">
+        <form className="contact-form">
+          <label htmlFor="name" className="label">Ihr Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            className="text-input"
+            required
+            placeholder="Geben Sie Ihren Namen ein"
+          />
+          
+          <label htmlFor="email" className="label">Ihre E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="text-input"
+            required
+            placeholder="Geben Sie Ihre E-Mail ein"
+          />
+          
+          <label htmlFor="feedback" className="label">Ihr Feedback</label>
+          <textarea
+            id="feedback"
+            name="feedback"
+            className="text-input"
+            required
+            placeholder="Geben Sie Ihr Feedback ein"
+          />
+
+          <div className="consent-section">
             <input
-              type="text"
-              id="yname"
-              name="user_name"
-              required
-              placeholder="Geben Sie Ihren Namen ein"
-              className="text-input"
-            />
-            <label htmlFor="yemail" className="label">Ihre E-Mail</label>
-            <input
-              type="email"
-              id="yemail"
-              name="user_email"
-              required
-              placeholder="Geben Sie Ihre E-Mail ein"
-              className="text-input"
-            />
-            <label htmlFor="yfeedback" className="label">Ihr Feedback</label>
-            <textarea
-              id="yfeedback"
-              name="user_feedback"
-              required
-              placeholder="Geben Sie Ihr Feedback ein"
-              className="text-input"
-            />
-            <input
-              type="radio"
+              type="checkbox"
               id="consent"
-              name="user_consent"
-              value="consent"
-              checked
+              name="consent"
               required
+              className="consent-checkbox"
             />
-            <label htmlFor="consent" className="radio-label">
-              Mit dem Absenden stimmen Sie der Verarbeitung Ihrer persönlichen Daten zu
+            <label htmlFor="consent" className="consent-label">
+              Ich stimme der Verarbeitung meiner Daten zu
             </label>
-            <input type="submit" id="btn" value="Absenden" />
-          </form>
-        </div>
+          </div>
+
+          <button type="submit" className="submit-btn">Absenden</button>
+        </form>
       </div>
-    </section>
+    </div>
   );
 };
 

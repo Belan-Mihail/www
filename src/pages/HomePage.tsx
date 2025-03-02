@@ -6,6 +6,7 @@ import ActionOrder from '../components/ActionOrder'
 import Accordion from '../components/Accordion'
 import ContactForm from '../components/ContactForm'
 
+
 const HomePage = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const HomePage = () => {
       <ActionOrder />
       <Accordion />
       <ContactForm />
+      
     </>
   )
 }

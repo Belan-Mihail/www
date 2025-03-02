@@ -97,12 +97,12 @@ const Accordion: React.FC = () => {
           className="flex flex-col items-center text-lg space-y-2 mt-4 w-full max-w-3xl mx-auto"
         >
           {/* Контейнер для предложений */}
-          <div className="w-full flex flex-col items-start space-y-2">
+          <div className="w-full flex flex-col items-start space-y-2 text-2xl">
             {/* Маппинг предложений */}
             {sentences.map((sentence, index) => (
               <motion.p
                 key={index}
-                className="text-left"
+                className="text-left mb-4"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: visibleSentences.includes(index) ? 1 : 0, // Показать предложение, если его индекс в visibleSentences
