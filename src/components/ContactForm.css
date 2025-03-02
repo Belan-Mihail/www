@@ -1,0 +1,76 @@
+.contact-form {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Подгонка по высоте */
+    background-image: url('../assets/image2.jpeg'); /* Замените на свой фон */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #0f172a;
+  }
+  
+  .contact-form .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-form .content {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный фон под формой */
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .contact-form h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .contact-form .text-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .contact-form .radio-label {
+    font-size: 0.9rem;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .contact-form #btn {
+    padding: 12px 30px;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form #btn:hover {
+    background-color: #425174;
+  }
+  

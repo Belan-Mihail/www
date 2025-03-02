@@ -4,6 +4,7 @@ import WorkSection from '../components/WorkSection'
 import WorkSectionTwo from '../components/WorkSectionTwo'
 import ActionOrder from '../components/ActionOrder'
 import Accordion from '../components/Accordion'
+import ContactForm from '../components/ContactForm'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <WorkSectionTwo />
       <ActionOrder />
       <Accordion />
+      <ContactForm />
     </>
   )
 }
