@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import WorkSection from '../components/WorkSection'
 import WorkSectionTwo from '../components/WorkSectionTwo'
 import ActionOrder from '../components/ActionOrder'
+import Accordion from '../components/Accordion'
 
 const HomePage = () => {
   return (
@@ -11,6 +12,7 @@ const HomePage = () => {
       <WorkSection />
       <WorkSectionTwo />
       <ActionOrder />
+      <Accordion />
     </>
   )
 }
