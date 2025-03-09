@@ -35,4 +35,22 @@
     font-size: 2rem;
     font-weight: bold;
   }
+
+  @media (max-width: 500px) {
+    .hero h2 {
+      font-size: 1.5rem;
+      
+    }
+
+    
+  }
+
+  @media (max-width: 380px) {
+    .hero h2 {
+      font-size: 1rem;
+      
+    }
+
+    
+  }
   

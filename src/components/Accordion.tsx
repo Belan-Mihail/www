@@ -10,11 +10,11 @@ const Accordion: React.FC = () => {
 
   // Список предложений
   const sentences = [
-    "Wir sind ein kleines Unternehmen, deshalb haben wir einen individuellen Ansatz für jeden Kunden.",
-    "Wir arbeiten immer gewissenhaft, damit der Kunde immer wieder zu uns kommt.",
-    "Unsere Preise sind viel niedriger als die Qualität unserer Arbeit.",
-    "Wir halten uns immer an die Fristen und alle Vereinbarungen.",
-    "Wir bieten eine persönliche Beratung und maßgeschneiderte Lösungen für jeden Auftrag.",
+    "Als kleines Unternehmen legen wir großen Wert auf einen individuellen Ansatz für jeden Kunden.",
+    "Wir arbeiten stets mit höchster Sorgfalt, um langfristige Kundenbeziehungen zu fördern.",
+    "Unsere Preise stehen in keinem Verhältnis zur außergewöhnlichen Qualität unserer Arbeit.",
+    "Wir halten uns strikt an vereinbarte Fristen und Absprachen.",
+    "Wir bieten eine persönliche Beratung sowie maßgeschneiderte Lösungen für jeden Auftrag.",
   ];
 
   // Функция для переключения состояния аккордеона

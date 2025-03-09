@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css'
 
 const Navbar = () => {
     const location = useLocation(); 
   
     return (
-      <nav className="bg-gray-900 text-white py-4 h-[120px]">
-        <div className="container mx-auto flex flex-col items-center">
+      <nav className="bg-gray-900 text-white py-4 h-[120px] navbar">
+        <div className="container mx-auto flex flex-col items-center navbar-container">
           
           <div className="text-3xl font-bold mb-4 z-20">
             <h1>Hanse-Fliesenlegern</h1>
           </div>
   
           
-          <div className="flex space-x-8">
+          <div className="flex space-x-8 navbar-links">
             
             {location.pathname === '/' ? (
               

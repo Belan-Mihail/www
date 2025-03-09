@@ -17,10 +17,10 @@ const WorkSectionTwo = () => {
   ];
 
   return (
-    <div className="h-[50rem] flex bg-gradient-to-b text-white py-10 px-8" style={{
+    <div className="h-[50rem] flex bg-gradient-to-b text-white py-10 px-8 main-container" style={{
       background: 'linear-gradient(to bottom, #0f172a, #618dc8, #0f172a)',
     }}>
-  <div className="w-1/2 p-8 border-effect flex flex-col justify-center space-y-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#425174]" style={{
+  <div className="w-1/2 main-block text-section p-8 border-effect flex flex-col justify-center space-y-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#425174]" style={{
       background: 'linear-gradient(to bottom, #0f172a, #354458, #0f172a)',
     }}>
       
@@ -40,7 +40,7 @@ const WorkSectionTwo = () => {
           Kontaktieren Sie uns bei Fragen
         </p>
       </div>
-      <div className="w-1/2 border-effect relative flex flex-col justify-center bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#425174]" style={{
+      <div className="main-block w-1/2 border-effect relative flex flex-col justify-center bg-gray-900 bg-opacity-80 rounded-lg shadow-xl m-4 hover:bg-[#425174]" style={{
       background: 'linear-gradient(to bottom, #0f172a, #354458, #0f172a)', 
     }}>
         <Slider images={images} justify="justify-start" />

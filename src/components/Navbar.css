@@ -1,0 +1,15 @@
+@media (max-width: 600px) {
+    .navbar {
+      height: 200px;
+      
+    }
+
+    .navbar-container {
+        height: 200px;  
+       
+    }
+
+    .navbar-links {
+        flex-direction: column; 
+    }
+  }
