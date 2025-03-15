@@ -17,7 +17,7 @@ const WorkSection = () => {
   ];
 
   return (
-    <div className="h-[50rem] flex bg-gradient-to-b from-gray-900 to-gray-800 text-white py-10 px-8 main-container" style={{
+    <div id="unsere-arbeiten"  className="h-[50rem] flex bg-gradient-to-b from-gray-900 to-gray-800 text-white py-10 px-8 main-container" style={{
       background: 'linear-gradient(to bottom, #0f172a, #618dc8, #0f172a)',
     }}>
   {/* Внутренний контейнер с фоном bg-gray-900 */}

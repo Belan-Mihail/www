@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaPlus, FaChevronUp } from "react-icons/fa"; // Иконки плюса и стрелки
+import "./Accordion.css"
 
 const Accordion: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false); // Состояние для открытия и закрытия аккордеона
@@ -64,30 +65,30 @@ const Accordion: React.FC = () => {
   }, [isOpen]);
 
   return (
-    <div className="bg-[#0f172a] text-white py-10 px-8">
-      <div className="flex items-center justify-center gap-4 border-2 border-white rounded-lg p-6 w-max mx-auto">
+    <div className="bg-[#0f172a] accord-container text-white py-10 px-8">
+      <div className="flex items-center justify-center gap-4 border-2 border-white rounded-lg p-6 w-max mx-auto accord-sub-container">
         {/* Кнопка для открытия/закрытия аккордеона */}
         <motion.button
           onClick={toggleAccordion}
           whileTap={{ scale: 0.9 }} // Эффект нажатия
           className={`w-16 h-16 flex items-center justify-center ${
             isOpen ? "bg-[#425174]" : "bg-orange-500"
-          } text-white text-4xl font-bold rounded-full hover:bg-[#2c3b4f]`}
+          } text-white text-4xl font-bold rounded-full hover:bg-[#2c3b4f] accord-button`}
         >
           {/* Если аккордеон открыт, показываем стрелку вверх, иначе плюс */}
           {isOpen ? (
-            <FaChevronUp size={32} /> // Стрелка вверх
+            <FaChevronUp className=" button-icons text-xl sm:text-2xl md:text-3xl lg:text-4xl" /> // Стрелка вверх
           ) : (
             <motion.div
               className={`transition-transform duration-1000 ${rotate ? "rotate-360" : ""}`}
             >
-              <FaPlus size={32} /> {/* Плюс для открытия */}
+              <FaPlus className=" button-icons text-xl sm:text-2xl md:text-3xl lg:text-4xl" /> {/* Плюс для открытия */}
             </motion.div>
           )}
         </motion.button>
 
         {/* Заголовок */}
-        <h2 className="text-4xl font-semibold">Warum es vorteilhaft ist, mit uns zusammenzuarbeiten</h2>
+        <h2 className="text-4xl font-semibold header">Warum es vorteilhaft ist, mit uns zusammenzuarbeiten</h2>
       </div>
 
       {/* Скрытый список предложений, который разворачивается */}

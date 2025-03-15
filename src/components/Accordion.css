@@ -11,3 +11,122 @@
     animation: rotateIcon 1s linear;
   }
   
+  @media (max-width: 1100px) {
+
+    .header {
+      font-size: 2rem;
+    }
+   
+  }
+
+  @media (max-width: 1000px) {
+
+    .header {
+      font-size: 1.75rem;
+    }
+   
+  }
+
+  
+  @media (max-width: 900px) {
+
+    .header {
+      font-size: 1.5rem;
+    }
+   
+  }
+
+  @media (max-width: 800px) {
+
+    .accord-container {
+      padding: 10px;
+    }
+
+    .accord-sub-container {
+      padding: 14px;
+    }
+
+    .accord-button {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .button-icons {
+      font-size: 1.5rem;
+    }
+
+    .header {
+      font-size: 1.5rem;
+    }
+   
+  }
+
+  @media (max-width: 750px) {
+
+    
+
+    .accord-button {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .button-icons {
+      font-size: 1rem;
+    }
+
+    .header {
+      font-size: 1rem;
+    }
+   
+  }
+
+  @media (max-width: 540px) {
+
+    
+
+    .accord-sub-container {
+      max-width: 400px;
+      gap: 0.5rem
+    }
+    
+    .header {
+      text-align: center;
+    }
+
+    .accord-button {
+      width: 3rem;
+      
+    }
+   
+  }
+  
+  @media (max-width: 450px) {
+
+    .accord-sub-container {
+      max-width: 300px;
+     
+    }
+    
+    .header {
+      font-weight: normal;
+    }
+
+    
+   
+  }
+
+  @media (max-width: 350px) {
+
+    .accord-sub-container {
+      max-width: 250px;
+     
+    }
+    
+    .header {
+      font-size: 0.8rem;
+    }
+
+    
+    
+   
+  }

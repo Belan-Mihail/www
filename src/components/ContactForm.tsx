@@ -3,7 +3,7 @@ import './ContactForm.css'; // Ваши стили для компонента
 
 const ContactForm: React.FC = () => {
   return (
-    <div className="contact-section">
+    <div id="kontakte" className="contact-section">
       {/* Заголовок для секции */}
       <h2 className="main-heading text-white text-4xl font-semibold text-center mb-10">
         Kontaktieren Sie uns

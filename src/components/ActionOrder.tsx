@@ -3,10 +3,11 @@ import { motion } from "framer-motion";
 
 const ActionOrder: React.FC = () => {
   return (
-    <div className="bg-[#0f172a] text-white py-10 px-8">
+    <div id="zusammenarbeit" className="bg-[#0f172a] text-white py-10 px-8">
       <h2 className="text-4xl font-semibold text-center mb-8">Ablauf der Aktion</h2>
 
-      <div className="flex justify-around gap-8">
+      {/* Контейнер для карточек */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Первый квадратик */}
         <motion.div
           whileInView={{
@@ -18,7 +19,7 @@ const ActionOrder: React.FC = () => {
             duration: 0.5, // Время анимации
             delay: 0, // Задержка для первого квадратика
           }}
-          className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
+          className="flex flex-col items-center p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
           <div className="icon text-4xl">📞</div>
           <h3 className="mt-4 text-lg font-semibold">Erster Kontakt</h3>
@@ -36,10 +37,10 @@ const ActionOrder: React.FC = () => {
             duration: 0.5, // Время анимации
             delay: 0.5, // Задержка 0.5 секунд для второго квадратика
           }}
-          className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
+          className="flex flex-col items-center p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
           <div className="icon text-4xl">🗣️</div>
-          <h3 className="mt-4 text-lg font-semibold">Beratung/Besuch des Spezialisten</h3>
+          <h3 className="mt-4 text-lg font-semibold text-center">Beratung/Besuch des Spezialisten</h3>
           <p className="text-center text-sm">Besprechung der Bedingungen/Kostenschätzung</p>
         </motion.div>
 
@@ -54,7 +55,7 @@ const ActionOrder: React.FC = () => {
             duration: 0.5, // Время анимации
             delay: 1, // Задержка 1 секунда для третьего квадратика
           }}
-          className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
+          className="flex flex-col items-center p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
           <div className="icon text-4xl">📑</div>
           <h3 className="mt-4 text-lg font-semibold">Vertragsabschluss</h3>
@@ -72,7 +73,7 @@ const ActionOrder: React.FC = () => {
             duration: 0.5, // Время анимации
             delay: 1.5, // Задержка 1.5 секунд для четвертого квадратика
           }}
-          className="flex flex-col items-center w-1/4 p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
+          className="flex flex-col items-center p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
           <div className="icon text-4xl">🏆</div>
           <h3 className="mt-4 text-lg font-semibold">Ergebnis</h3>
