@@ -104,7 +104,11 @@
    
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
+
+    .main-block {
+      height: 100%;
+    }
     
     .text-section p, ul {
       font-size: 0.8rem;
@@ -115,10 +119,12 @@
     }
 
     .slider-block {
-      height: 30rem;
+      height: 20rem;
     }
 
-    
+    .main-block-two {
+      height: 25rem;
+    }
    
   }
   

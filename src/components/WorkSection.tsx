@@ -43,7 +43,7 @@ const WorkSection = () => {
       </div>
       
       {/* Контейнер для слайдера с фоном и плашкой */}
-      <div className="main-block w-1/2 border-effect relative flex flex-col justify-center m-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl hover:bg-[#425174]" style={{
+      <div className="main-block main-block-two w-1/2 border-effect relative flex flex-col justify-center m-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl hover:bg-[#425174]" style={{
       background: 'linear-gradient(to bottom, #0f172a, #354458, #0f172a)',
     }}>
         
