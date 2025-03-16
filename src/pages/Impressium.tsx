@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Impressum.css'; // Создаем отдельный CSS для Impressum, если нужно
 
 const Impressium = () => {

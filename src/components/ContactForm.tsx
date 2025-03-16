@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {
             </label>
           </div>
 
-          <button type="submit" className="submit-btn">Absenden</button>
+          <button type="submit" className="submit-btn bg-yellow-500 hover:bg-yellow-600">Absenden</button>
         </form>
       </div>
     </div>

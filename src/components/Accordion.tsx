@@ -62,6 +62,7 @@ const Accordion: React.FC = () => {
     } else {
       setVisibleSentences([]); // Очистка состояния при закрытии аккордеона
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   return (

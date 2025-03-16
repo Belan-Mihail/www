@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa'; // Иконка для кнопки "Вверх"
 
 const ToTop = () => {
