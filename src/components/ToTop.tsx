@@ -32,7 +32,7 @@ const ToTop = () => {
 
   return (
     <div
-      className={`fixed bottom-10 right-10 z-50 p-3 rounded-full bg-yellow-500 text-white cursor-pointer transition-transform duration-300 ${
+      className={`fixed bottom-10 right-10 z-50 p-3 rounded-full bg-yellow-500 hover:bg-yellow-600 text-white cursor-pointer transition-transform duration-300 ${
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
       onClick={scrollToTop}

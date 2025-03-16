@@ -1,0 +1,58 @@
+/* CookieModal.css */
+
+.cookie-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .cookie-modal-content {
+    background: linear-gradient(to bottom, #0f172a, #354458, #0f172a); /* Matching the background gradient */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    width: 80%;
+  }
+  
+  .accept-button {
+    
+    color: white;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-text {
+    font-size: 1.2rem;
+
+}
+
+.modal-header {
+    font-size: 1.5rem;
+}
+  
+
+  @media (max-width: 500px) {
+
+    .modal-text {
+        font-size: 1rem;
+
+    }
+
+    .modal-header {
+        font-size: 1.2rem;
+    }
+   
+  }
