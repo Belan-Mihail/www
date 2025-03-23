@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const ActionOrder: React.FC = () => {
   return (
     <div id="zusammenarbeit" className="bg-[#0f172a] text-white py-10 px-8">
-      <h2 className="text-4xl font-semibold text-center mb-8">Ablauf der Aktion</h2>
+      <h2 className="text-4xl font-semibold text-center mb-8">Vorgang der Aktion</h2>
 
       {/* Контейнер для карточек */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -40,8 +40,8 @@ const ActionOrder: React.FC = () => {
           className="flex flex-col items-center p-6 border border-white rounded-lg shadow-lg bg-opacity-80 hover:bg-[#425174]"
         >
           <div className="icon text-4xl">🗣️</div>
-          <h3 className="mt-4 text-lg font-semibold text-center">Beratung/Besuch des Spezialisten</h3>
-          <p className="text-center text-sm">Besprechung der Bedingungen/Kostenschätzung</p>
+          <h3 className="mt-4 text-lg font-semibold text-center">Fachberatung und Vor-Ort-Besichtigung</h3>
+          <p className="text-center text-sm">Klärung der Rahmenbedingungen und Erstellung eines Angebots</p>
         </motion.div>
 
         {/* Третий квадратик */}
