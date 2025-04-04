@@ -16,12 +16,20 @@
     .header {
       font-size: 2rem;
     }
+
+    .accord-text {
+      font-size: 2rem;
+    }
    
   }
 
   @media (max-width: 1000px) {
 
     .header {
+      font-size: 1.75rem;
+    }
+
+    .accord-text {
       font-size: 1.75rem;
     }
    
@@ -31,6 +39,10 @@
   @media (max-width: 900px) {
 
     .header {
+      font-size: 1.5rem;
+    }
+
+    .accord-text {
       font-size: 1.5rem;
     }
    
@@ -75,6 +87,10 @@
     }
 
     .header {
+      font-size: 1rem;
+    }
+
+    .accord-text {
       font-size: 1rem;
     }
    
@@ -123,6 +139,10 @@
     }
     
     .header {
+      font-size: 0.8rem;
+    }
+
+    .accord-text {
       font-size: 0.8rem;
     }
 

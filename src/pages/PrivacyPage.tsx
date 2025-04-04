@@ -1,9 +1,12 @@
 
+import MiniModal from '../components/MiniModal';
 import './Impressum.css'; // Создаем отдельный CSS для Impressum, если нужно
 
 const PrivacyPage = () => {
   return (
-    <div className=" flex bg-gradient-to-b from-gray-900 to-gray-800 text-white ">
+    <div className=" flex bg-gradient-to-b from-gray-900 to-gray-800 text-white date-container">
+      
+      
       {/* Внутренний контейнер с фоном bg-gray-900, без ховер эффекта */}
       <div
         className="w-full p-8 flex flex-col justify-center space-y-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl"
@@ -11,8 +14,9 @@ const PrivacyPage = () => {
           background: 'linear-gradient(to bottom, #0f172a, #354458, #0f172a)',
         }}
       >
+        <MiniModal />
         {/* Заголовок страницы */}
-        <h2 className="text-4xl font-semibold text-center text-gradient">Datenschutzerklärung</h2>
+        <h2 className="text-xl font-semibold text-center text-gradient md:text-3xl">Datenschutzerklärung</h2>
 
         {/* Раздел 1 - Allgemeine Hinweise */}
         <div className="space-y-4">
@@ -32,7 +36,7 @@ const PrivacyPage = () => {
             <strong>Hanse-Fliesenleger</strong><br />
             Clemens-Schulz-Straße 29<br />
             +49 157 81461757<br />
-            E-Mail: [wird noch ergänzt]
+            E-Mail: <span className='text-yellow-500'>v.akimenko@tdk-bau.de</span>
           </p>
         </div>
 

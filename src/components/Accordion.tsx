@@ -99,7 +99,7 @@ const Accordion: React.FC = () => {
           className="flex flex-col items-center text-lg space-y-2 mt-4 w-full max-w-3xl mx-auto"
         >
           {/* Контейнер для предложений */}
-          <div className="w-full flex flex-col items-start space-y-2 text-2xl">
+          <div className="w-full flex flex-col items-start space-y-2 text-2xl accord-text">
             {/* Маппинг предложений */}
             {sentences.map((sentence, index) => (
               <motion.p

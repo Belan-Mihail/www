@@ -1,9 +1,11 @@
 
+import Modal from '../components/Modal';
 import './Impressum.css'; // Создаем отдельный CSS для Impressum, если нужно
 
 const Impressium = () => {
   return (
-    <div className="flex bg-gradient-to-b from-gray-900 to-gray-800 text-white ">
+    <div className="flex bg-gradient-to-b from-gray-900 to-gray-800 text-white date-container">
+      <Modal />
       {/* Внутренний контейнер с фоном bg-gray-900, без ховер эффекта */}
       <div
         className="w-full p-8 flex flex-col justify-center space-y-4 bg-gray-900 bg-opacity-80 rounded-lg shadow-xl"
@@ -12,7 +14,7 @@ const Impressium = () => {
         }}
       >
         {/* Заголовок страницы */}
-        <h2 className="text-4xl font-semibold text-center text-gradient">Impressum</h2>
+        <h2 className="text-xl font-semibold text-center text-gradient md:text-3xl">Impressum</h2>
 
         {/* Контактная информация */}
         <div className="space-y-4">
@@ -27,7 +29,7 @@ const Impressium = () => {
             <strong>Telefon:</strong> +49 157 81461757
           </p>
           <p className="text-2xl">
-            <strong>E-Mail:</strong> [wird noch ergänzt]
+            <strong>E-Mail:</strong> <span className='text-yellow-500'>v.akimenko@tdk-bau.de</span>
           </p>
           <p className="text-2xl">
             <strong>St.Nr.:</strong> 43/762/02386

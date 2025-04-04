@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import './Modal.css';
+import { useLocation } from "react-router-dom";
+import "./Modal.css";
+import { div } from "framer-motion/client";
 
-const Modal = () => {
+const MiniModal = () => {
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
 
@@ -37,25 +38,17 @@ const Modal = () => {
   };
 
   return (
-    isVisible && (
-      <div className="cookie-modal">
-        <div className="cookie-modal-content">
-          <h2 className="modal-header font-semibold text-center text-white">Cookie-Hinweis</h2>
-          <p className=" modal-text  text-center text-white mt-4">
-            Wir verwenden Cookies
-            <br />
-            Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzungserfahrung zu bieten. Einige Cookies sind für den Betrieb der Website erforderlich, während andere uns helfen, die Website zu verbessern und Ihre Benutzererfahrung zu optimieren.
-          </p>
-          <p className=" modal-text text-center text-white mt-4">
-            Durch Klicken auf „Akzeptieren“ stimmen Sie der <Link to="/datenschutz" className="text-yellow-400 hover:text-yellow-500 transition duration-100 font-normal">Verwendung von Cookies</Link> zu. Weitere Informationen finden Sie in unserer Datenschutzerklärung.
-          </p>
-          <div className="text-center mt-6">
-            <button onClick={acceptCookies} className="accept-button bg-yellow-500 hover:bg-yellow-600">Akzeptieren</button>
-          </div>
-        </div>
-      </div>
-    )
+    <div className={`fixed bottom-10 left-10 z-50 p-3 rounded-full bg-yellow-500 hover:bg-yellow-600 text-white cursor-pointer transition-transform duration-300 ${
+        isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+      }`}>
+      <button
+        onClick={acceptCookies}
+        className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-lg transition duration-300 fixed bottom-10 left-10 z-50"
+      >
+        Cookie Akzeptieren
+      </button>
+    </div>
   );
 };
 
-export default Modal;
+export default MiniModal;
