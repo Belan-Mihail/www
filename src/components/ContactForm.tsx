@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Стили для toast уведомлений
 import "./ContactForm.css"; // Ваши стили для компонента
+import emailjs from 'emailjs-com';
 
 const ContactForm: React.FC = () => {
-  // Состояние для полей формы
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -14,7 +14,6 @@ const ContactForm: React.FC = () => {
     consent: false,
   });
 
-  // Обработчик изменения полей
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -23,7 +22,6 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  // Обработчик изменения для чекбокса
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
     setFormData((prev) => ({
@@ -32,30 +30,43 @@ const ContactForm: React.FC = () => {
     }));
   };
 
-  // Обработчик отправки формы
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Проверка на пустые поля и капчу
     if (!formData.firstname || !formData.lastname || !formData.email || !formData.feedback || !formData.consent) {
-      toast.error("Все поля должны быть заполнены и чекбокс должен быть отмечен!");
+      toast.error("Alle Felder müssen ausgefüllt und das Kontrollkästchen muss angekreuzt sein!");
       return;
     }
 
-    // Если все прошло успешно, очистим форму и уведомим пользователя
-    toast.success("Ваше сообщение отправлено!");
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      feedback: "",
-      consent: false,
-    });
+    // Отправка данных через EmailJS
+    const templateParams = {
+      firstname: formData.firstname,
+      lastname: formData.lastname,
+      email: formData.email,
+      feedback: formData.feedback,
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
+      .then((response) => {
+        console.log('Email sent successfully', response);
+        toast.success("Ihre Nachricht wurde gesendet!");
+        setFormData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          feedback: "",
+          consent: false,
+        });
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        toast.error("Beim Senden der Nachricht ist ein Fehler aufgetreten.");
+      });
   };
 
   return (
     <div id="kontakte" className="contact-section">
-      {/* Toast контейнер должен быть наверху компонента */}
       <ToastContainer 
         position="bottom-left" 
         autoClose={2000} 
@@ -68,12 +79,10 @@ const ContactForm: React.FC = () => {
         pauseOnHover
       />
       
-      {/* Заголовок для секции */}
       <h2 className="main-heading text-white text-4xl font-semibold text-center mb-10">
         Kontaktieren Sie uns
       </h2>
 
-      {/* Контактная форма */}
       <div className="contact-form-container">
         <form className="contact-form" onSubmit={handleSubmit}>
           <label htmlFor="firstname" className="label">
@@ -150,7 +159,6 @@ const ContactForm: React.FC = () => {
             </label>
           </div>
 
-          {/* Кнопки */}
           <div className="flex justify-center buttons">
             <button
               type="submit"
